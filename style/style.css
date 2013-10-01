@@ -12,17 +12,23 @@ body
 
 p
 { padding: 0 0 20px 0;
-  line-height: 1.7em;}
+  line-height: 2.3em;}
+
+h1
+{
+  font-size: xx-large !important;
+}
 
 h1, h2
 { font: normal 175% 'century gothic', arial, sans-serif;
-  color: #43423F;
-  margin: 0 0 15px 0;
+  color: #CCC;
+  margin: 0 0 0px 0;
   padding: 15px 0 5px 0;}
 
 h2
 { font: normal 175% 'century gothic', arial, sans-serif;
-  color: #1293EE;}
+  color: #1293EE;
+}
 
 a, a:hover
 { outline: none;
@@ -38,12 +44,12 @@ a:hover
 
 #header
 { background: #F79F00;
-  height: 170px;}
+  height: 102px;}
 
 #logo
 { width: 1000px;
   position: relative;
-  height: 98px;
+  height: 62px;
   }
 
 #logo #logo_text 
@@ -58,7 +64,7 @@ a:hover
   margin: 0;}
 
 #logo_text h1, #logo_text h1 a, #logo_text h1 a:hover 
-{ padding: 22px 0 0 0;
+{ padding: 5px 0 0 0;
   color: #FFF;
   letter-spacing: 0.1em;
   text-decoration: none;}
@@ -68,12 +74,12 @@ a:hover
 
 #logo_text h2
 { font-size: 100%;
-  padding: 4px 0 0 0;
+  padding: 0;
   color: #FFF;}
 
 #menubar
 { width: 1061px;
-  height: 72px;
+  height: 40px;
   background: url(menu.png) repeat-x;} 
 
 ul#menu, ul#menu li
@@ -88,8 +94,8 @@ ul#menu li a
 { letter-spacing: 0.1em;
   font: normal 100% 'lucida sans unicode', arial, sans-serif;
   float: left; 
-  height: 37px;
-  padding: 29px 26px 6px 26px;
+  height: 23px;
+  padding: 12px 26px 5px 26px;
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;} 
@@ -102,20 +108,21 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 { width: 1000px;
   height:100%;
   overflow: hidden;
-  padding: 20px 24px 20px 37px;
-  background: rgba(255,255,255,0.7) repeat-y;} 
+  padding: 20px 24px 10px 37px;
+  background: rgba(50,50,50,0.7) repeat-y;} 
 
 #content
 { text-align: left;
-  width: 1000px;
-  height: 430px;
+  width: 987px;
+  height: 510px;
   overflow:auto;
-  padding: 0;}
+  padding: 0;
+  color:white;}
 
 #footer
 { width: 1061px;
   font: normal 100% 'lucida sans unicode', arial, sans-serif;
-  height: 20px;
+  height: 18px;
   padding: 11px 0 5px 0;
   background: url(footer.png) repeat-x;
   letter-spacing: 0.2em;}
