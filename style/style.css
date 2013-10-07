@@ -12,7 +12,9 @@ body
 
 p
 { padding: 0 0 20px 0;
-  line-height: 2.3em;}
+  line-height: 2.3em;
+  font-size:normal;
+}
 
 h1
 {
@@ -129,9 +131,14 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 
 table
 { margin: auto;
-  margin-top: -5px;}
+  margin-top: -5px;
+}
 
 table tr td
 { color: #47433F;
   padding: 0 20px;
   }
+
+table p {
+  color:white;
+}
