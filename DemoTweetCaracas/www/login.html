@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+  <title>TweetCaracas</title>
+  <link rel="stylesheet" href="css/prueba.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+  
+  <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/base64.js"></script>
+
+  <style>
+  body{
+
+
+  }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<script>
+  $(document).ready(function(){
+    $("#login").click(function(){
+//       var data_file = "http://10.0.1.87:8000/usuarios/n=";
+      var data_file = "http://0.0.0.0:8000/usuarios/n=";
+      var http_request = new XMLHttpRequest();
+      var form = $("#insertar").serializeArray()
+      username = form[0]['value'];
+      password = form[1]['value'];
+      data_file = data_file + username + "/p=" + password + "/";
+
+      http_request.onreadystatechange = function (oEvent) {  
+        if (http_request.readyState === 4) {  
+          if (http_request.status != 200) {  
+            alert("Nombre o password incorrecto. Intentelo de nuevo.");
+          } else {
+              $("#insertar").attr('action',"columna.html");
+//               $("#usuario_autenticado").attr('value',username);
+              localStorage['usuario_autenticado'] = username;
+              localStorage['clave'] = password;
+              localStorage['columna'] = "timeline";
+          }
+        }  
+      };
+
+      http_request.open("GET", data_file, false);
+      http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(username + ':' + password));
+      http_request.send();
+    });
+  });
+</script>
+
+  <div id="phoneBorder" style="background-image:url('images/imported/caracas-parque-nacional-el-avila-1280x800.jpg');">
+    <center>
+      <img id="initAppLogo" src="images/imported/LOGOOO_nap10.png"/>
+      <form action="" class="form-horizontal" id="insertar">
+        <div class="control-group">
+          <div class="controls" style="margin: 0px">
+            <input name="username" type="text" id="inputEmail" placeholder="Usuario">
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls" style="margin: 0px">
+            <input onClick = "columna()" name="password" type="password" id="inputPassword" placeholder="Contrasena">
+          </div>
+        </div>
+        <input id="login" type="submit" class="btn btn-info" value="Iniciar Sesion"/>
+        <input type="hidden" name="usuario_autenticado" id="usuario_autenticado" value=""/>
+      </form>
+    <button type="submit" class="btn btn-success">
+      <a href="subscripcion.html" style="color: white; text-decoration: none">
+        Crear cuenta
+      </a>
+    </button>
+      <div class="borde" style="margin: 20px;">
+       <h5 style="color:white;"> ¿Es la primera vez que usas TweetCaracas?</h5>
+       <button type="submit" class="btn btn-info">
+        <a href="Tour_Ayuda/columna.html" style="color: white; text-decoration: none">
+          Ver Tutorial
+        </a>
+      </button>
+    </div>
+  </center>
+</div>
+
+</body>
+</html>

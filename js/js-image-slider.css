@@ -1,9 +1,9 @@
 /*slider frame*/
 #sliderFrame 
 {
-  width:920px;
+  width:800px;
   height:480px;
-  margin:0 auto; /*center-aligned*/
+  margin:0 100px; /*center-aligned*/
   padding:10px 20px;
   box-shadow: 0 0 5px #BBB;
   border:1px solid #CCC;
@@ -12,7 +12,7 @@
 
 #slider, #slider div.sliderInner
 {
-  width:680px;height:306px;/* Must be the same size as the slider images */
+  width:600px;height:306px;/* Must be the same size as the slider images */
 }
 
 #slider
@@ -42,10 +42,10 @@
 #slider div.mc-caption-bg, #slider div.mc-caption-bg2
 {
 	position:absolute;
-	width:400px;
+	width:200px;
 	height:auto;
 	padding:10px 0;/* 10px will increase height.*/
-	left:150px; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
+	left:200px; /*if the caption needs to be aligned from right, specify by right instead of left. i.e. right:20px;*/
 	bottom:10px;/*if the caption needs to be aligned from top, specify by top instead of bottom. i.e. top:150px;*/
 	z-index:3;
 	overflow:hidden;
@@ -127,7 +127,7 @@
 {
   float:left;
   margin-left:10px;
-  width:230px;
+  width:180px;
   font:normal 11px/13px Arial;
   border-top:1px solid #CCC;
   color:#666;
@@ -169,7 +169,7 @@
 #thumbs .thumb-content
 {
   float:left;
-  width:110px;
+  width:90px;
   padding-left:18px;
 }
 

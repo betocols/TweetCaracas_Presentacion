@@ -142,3 +142,28 @@ table tr td
 table p {
   color:white;
 }
+
+.boton {
+  padding: 5px; 
+  letter-spacing: 0.1em;
+  font: normal 100% 'lucida sans unicode', arial, sans-serif;
+  height: 23px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: url(menu.png) repeat-x;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  }
+
+.boton a {
+  letter-spacing: 0.1em;
+  font: normal 100% 'lucida sans unicode', arial, sans-serif;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.boton.selected
+{ color: #FFF;
+  background: #555555 url(menu_select.png) repeat-x;}
